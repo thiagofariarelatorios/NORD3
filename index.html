@@ -198,6 +198,11 @@ select, input {
   transform: translateY(-2px);
 }
 
+.button i {
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
 .confirmation {
   display: none;
   text-align: center;
@@ -223,6 +228,11 @@ select, input {
   animation: fadeIn 0.5s ease forwards;
 }
 
+.barber-card .gcal-appointment-button {
+  margin-top: 10px;
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   .barbers-grid, .services-grid {
     grid-template-columns: 1fr;
@@ -237,7 +247,7 @@ select, input {
   <div class="header">
     <img src="logo.png" class="logo" alt="Nord Barbershop Logo">
     <h1>NORD BARBERSHOP</h1>
-    <p>Reserve o seu hor&#xe1;rio</p>
+    <p>Reserve o seu horário</p>
   </div>
 
   <div class="booking-form">
@@ -250,70 +260,58 @@ select, input {
     </div>
 
     <div class="form-group">
-      <label>Escolha os servi&#xe7;os</label>
+      <label>Escolha os serviços</label>
       <div class="services-container">
         <label class="service-checkbox">
-          <input type="checkbox" name="service" value="34.99" data-name="Corte m&#xe1;quina">
+          <input type="checkbox" name="service" value="34.99" data-name="Corte máquina">
           <div class="service-details">
-            <span class="service-name">Corte m&#xe1;quina</span>
-            <span class="service-price">R&#x24; 34,99</span>
+            <span class="service-name">Corte máquina</span>
+            <span class="service-price">R$ 34,99</span>
           </div>
         </label>
         <label class="service-checkbox">
           <input type="checkbox" name="service" value="45.00" data-name="Corte Tesoura">
           <div class="service-details">
             <span class="service-name">Corte Tesoura</span>
-            <span class="service-price">R&#x24; 45,00</span>
+            <span class="service-price">R$ 45,00</span>
           </div>
         </label>
         <label class="service-checkbox">
           <input type="checkbox" name="service" value="30.00" data-name="Barba">
           <div class="service-details">
             <span class="service-name">Barba</span>
-            <span class="service-price">R&#x24; 30,00</span>
+            <span class="service-price">R$ 30,00</span>
           </div>
         </label>
         <label class="service-checkbox">
           <input type="checkbox" name="service" value="10.00" data-name="Pezinho">
           <div class="service-details">
             <span class="service-name">Pezinho</span>
-            <span class="service-price">R&#x24; 10,00</span>
+            <span class="service-price">R$ 10,00</span>
           </div>
         </label>
         <label class="service-checkbox">
           <input type="checkbox" name="service" value="14.90" data-name="Sobrancelha">
           <div class="service-details">
             <span class="service-name">Sobrancelha</span>
-            <span class="service-price">R&#x24; 14,90</span>
+            <span class="service-price">R$ 14,90</span>
           </div>
         </label>
         <label class="service-checkbox">
           <input type="checkbox" name="service" value="69.90" data-name="Corte+Barba">
           <div class="service-details">
             <span class="service-name">Corte+Barba</span>
-            <span class="service-price">R&#x24; 69,90</span>
+            <span class="service-price">R$ 69,90</span>
           </div>
         </label>
         <label class="service-checkbox">
           <input type="checkbox" name="service" value="150.00" data-name="Pintar cabelo Platinado">
           <div class="service-details">
             <span class="service-name">Pintar cabelo Platinado</span>
-            <span class="service-price">R&#x24; 150,00</span>
+            <span class="service-price">R$ 150,00</span>
           </div>
         </label>
       </div>
-    </div>
-
-    <div class="form-group">
-      <label>Data</label>
-      <input type="date" id="date" min>
-    </div>
-
-    <div class="form-group">
-      <label>Hor&#xe1;rio</label>
-      <select id="time">
-        <option value>Selecione um hor&#xe1;rio</option>
-      </select>
     </div>
 
     <div class="form-group">
@@ -324,33 +322,99 @@ select, input {
             <img src="thor.jpg" alt="Thor">
           </div>
           <h3>Thor</h3>
-          <p>Especialista em degrade</p>
+          <p>Corte relâmpago com a força de Asgard</p>
+          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+          <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3UKTreLWxuuznJKIRiu7Vfrz7hlOX3jdfTbvFCoAfSSetlwM_BwMI36Esm5Ow0jxNOJ5E36_mn?gv=true',
+                color: '#F6BF26', 
+                label: 'Agende seu horário',
+                target,
+              });
+            });
+          })();
+          </script>
         </div>
         <div class="barber-card" data-id="2">
           <div class="barber-image">
             <img src="odin.jpg" alt="Odin">
           </div>
           <h3>Odin</h3>
-          <p>Mestre em barba</p>
+          <p>Seu cabelo e sua barba digna de um deus</p>
+          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+          <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2TvUTug_rKO3VyQ4YvPnAFbKBLu1XZ7hSqbsFIJakYn-jZR_FAgX889af2POx3wLYSzB3RfuxG?gv=true',
+                color: '#F6BF26',
+                label: 'Agende seu horário',
+                target,
+              });
+            });
+          })();
+          </script>
         </div>
         <div class="barber-card" data-id="3">
           <div class="barber-image">
             <img src="loki.jpg" alt="Loki">
           </div>
           <h3>Loki</h3>
-          <p>Cortes modernos</p>
+          <p>Venha, mortal, e saia irreconhecível</p>
+          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+          <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2BVoJu3hUITxj1sv9j8f8qVISCYxCYZco9gPzm96WsJ4faRPeUWUPBdd7Q1iY9Z54tW7YMY8kG?gv=true',
+                color: '#F6BF26', 
+                label: 'Agende seu horário', 
+                target,
+              });
+            });
+          })();
+          </script>
         </div>
         <div class="barber-card" data-id="4">
           <div class="barber-image">
             <img src="kratos.jpg" alt="Kratos">
           </div>
           <h3>Kratos</h3>
-          <p>Especialista em tesouras e M&#xe1;quina</p>
+          <p>Tesouras afiadas como as Lâminas do Caos</p>
+          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+          <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2OimznpQ6E5GauQYFU9I0L5_KgNmS0IWDj_bzvyhaybR_XBIUjgLNGpcNIfOzhOhrB7lj6AYmt?gv=true',
+                color: '#F6BF26',
+                label: 'Agende seu horário',
+                target,
+              });
+            });
+          })();
+          </script>
         </div>
       </div>
     </div>
 
-    <button class="button" id="confirm-btn">Confirmar Agendamento</button>
+    <div class="form-group">
+      <label>Ou se preferir, fale conosco pelo whatsapp</label>
+    </div>
+
+    <button class="button" id="confirm-btn">
+      <i class="fab fa-whatsapp"></i> Whatsapp
+    </button>
   </div>
 
   <div class="confirmation" id="confirmation">
@@ -361,67 +425,12 @@ select, input {
 </div>
 
 <script>document.addEventListener('DOMContentLoaded', function () {
-  const today = new Date().toISOString().split('T')[0];
-  document.getElementById('date').min = today;
-  const timeSelect = document.getElementById('time');
-  for (let hour = 9; hour <= 18; hour++) {
-    for (let minutes of ['00', '30']) {
-      if (hour !== 18 || minutes !== '30') {
-        const timeStr = `${hour.toString().padStart(2, '0')}:${minutes}`;
-        const option = document.createElement('option');
-        option.value = timeStr;
-        option.textContent = timeStr;
-        timeSelect.appendChild(option);
-      }
-    }
-  }
-  const barberCards = document.querySelectorAll('.barber-card');
-  let selectedBarber = null;
-  barberCards.forEach(card => {
-    card.addEventListener('click', () => {
-      barberCards.forEach(c => c.classList.remove('selected'));
-      card.classList.add('selected');
-      selectedBarber = {
-        id: card.dataset.id,
-        name: card.querySelector('h3').textContent
-      };
-    });
-  });
   document.getElementById('confirm-btn').addEventListener('click', () => {
-    const clientName = document.getElementById('client-name').value.trim();
-    const clientPhone = document.getElementById('client-phone').value.trim();
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const selectedServices = Array.from(document.querySelectorAll('input[name="service"]:checked')).map(checkbox => ({
-      name: checkbox.dataset.name,
-      price: parseFloat(checkbox.value)
-    }));
-    if (!clientName || !clientPhone || !date || !time || !selectedBarber || selectedServices.length === 0) {
-      alert('Por favor, preencha todos os campos e selecione pelo menos um serviço');
-      return;
-    }
-    const totalPrice = selectedServices.reduce((sum, service) => sum + service.price, 0);
-    const servicesText = selectedServices.map(service => `${service.name} - R$ ${service.price.toFixed(2)}`).join('\n');
-    const formattedDate = new Date(date).toLocaleDateString('pt-BR');
-    const message = `*Novo Agendamento*\n\n👤 Cliente: ${clientName}\n📱 Telefone: ${clientPhone}\n📅 Data: ${formattedDate}\n⏰ Horário: ${time}\n\n✂️ Serviços:\n${servicesText}\n\n💰 Valor Total: R$ ${totalPrice.toFixed(2)}\n💈 Barbeiro: ${selectedBarber.name}`;
+    const message = "Saudações! Quero reservar meu horário nesse salão que o Valhala dos cortes!";
     const whatsappNumber = "5522981544410";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
-    document.getElementById('confirmation-details').textContent = `${clientName}, seu agendamento está confirmado!\n${formattedDate} às ${time}\nServiços: ${selectedServices.map(s => s.name).join(', ')}\nValor Total: R$ ${totalPrice.toFixed(2)}\nBarbeiro: ${selectedBarber.name}`;
-    const confirmation = document.getElementById('confirmation');
-    confirmation.style.display = 'block';
-    confirmation.classList.add('animate-in');
-    document.getElementById('client-name').value = '';
-    document.getElementById('client-phone').value = '';
-    document.getElementById('date').value = '';
-    document.getElementById('time').value = '';
-    document.querySelectorAll('input[name="service"]').forEach(checkbox => checkbox.checked = false);
-    barberCards.forEach(c => c.classList.remove('selected'));
-    selectedBarber = null;
-    confirmation.scrollIntoView({
-      behavior: 'smooth'
-    });
   });
 });</script>
 </body></html>
